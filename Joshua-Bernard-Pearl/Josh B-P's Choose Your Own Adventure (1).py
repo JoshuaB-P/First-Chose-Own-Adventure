@@ -1,3 +1,47 @@
+import random
+
+
+class Question():
+    def __init__(self, question, choices):
+        self.question = question
+
+    def get_question(self):
+        return self.question
+
+    def ask_question(self):
+        answer = input(self.question)
+        return answer
+
+
+def probability(x):
+    def chance():
+        if random.randint(1, 100) <= x:
+            return True
+        else:
+            return False
+
+    return chance
+
+
+random_name = Question("You wake up in a forest and see a wiled boar charging toward you\n a)run\n b)fight\nwhat will you do:",None)
+print(random_name.ask_question())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 '''import random
 health = 100
 items = []
@@ -13,8 +57,6 @@ def play(question,option):
 	if answer == "A" or "a":
 		return options[0]
 play(q,o)'''
-
-
 
 '''def  add(x,y):
 	return x + y
@@ -35,7 +77,6 @@ def thing():
 	number = number + 1
 	return number ** 2
 print(thing())'''
-
 
 
 
@@ -66,24 +107,6 @@ print(thing())'''
 # i = 0
 # while i > -1:
 # 	i += 1
-
-import random
-class Question():
-	def __init__(self,question,choices):
-		self.question = question
-	def get_question(self):
-		return self.question
-
-def probability(x):
-	def chance():
-		if random.randint(1,100) <= x:
-			return True
-		else:
-		return False
-	return chance
-
-query = Question("You wake up in a forest and see a wiled boar charging toward you\n a)run\n b)fight\nwhat will you do:")		
-print(query.get_question())
 
 
 # health = 100
